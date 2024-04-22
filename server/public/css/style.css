@@ -1,0 +1,108 @@
+/* this make the form of post look like a normal link */
+.standard-link {
+  border: none;
+  background-color: transparent;
+  color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
+  text-decoration: underline;
+  display: inline;
+}
+
+.insult-container {
+  padding: 20px;
+  background-color: #ffdddd;
+  border: 1px solid #ffaaaa;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.insult-text {
+  color: #555;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: #28a745 !important;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #f8f9fa !important;
+  background-color: #218838 !important;
+}
+
+.navbar-toggler-icon {
+  background-color: #ffffff;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 10px;
+}
+
+/* create link styling */
+.create-link {
+  color: #007bff; 
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 2px solid #007bff;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.create-link:hover {
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+/* back link styling */
+.back-link {
+  color: #0e5804; 
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border: 2px solid #0e5804;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back-link:hover {
+  background-color: #0e5804;
+  color: #ffffff;
+}
+
+/* home styling */
+.height-80 {
+  height: 80vh;
+}
+
+.intro {
+  font-size: 32px;
+  color: #4CAF50;
+  line-height: 1.5;
+}
+
+.description {
+  font-size: 20px;
+  color: #009688;
+  line-height: 1.5;
+}
+
+/* form styling */
+.form-label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #0e5804;
+}
+
+.form-control {
+  border-radius: 5px;
+}

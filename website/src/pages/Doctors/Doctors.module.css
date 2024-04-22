@@ -1,0 +1,49 @@
+.tableHeader {
+    color: #050770 !important;
+    background-color: rgb(162, 191, 252) !important;
+    font-weight: bold;
+}
+
+.tableBody {
+    color: #330253 !important;
+    font-weight: bold;
+}
+
+.formLabel {
+    font-size: 18px;
+    font-weight: bold;
+    color: #0e5804;
+}
+
+.registerButton {
+    color: #007bff; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+.registerButton:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+
+.backButton {
+    color: #0e5804; 
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid #0e5804;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.backButton:hover {
+    background-color: #0e5804;
+    color: #ffffff;
+}

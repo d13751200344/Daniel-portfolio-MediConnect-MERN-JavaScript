@@ -1,0 +1,50 @@
+<%- include("../shared/_header") %>
+
+    <div class="container mt-5">
+        <h1>Hospitals List</h1>
+
+        <hr class="my-5">
+
+        <a href="/hospitals/new" class="create-link">Create a new hospital</a>
+
+        <div class="table-responsive mt-4">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">Hospital Name</th>
+                        <th class="text-center">Location</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <% if (hospitals && hospitals.length> 0) { %>
+                        <% hospitals.forEach(({ id, hospitalName, location })=> { %>
+                            <tr>
+                                <td class="text-center">
+                                    <%= hospitalName %>
+                                </td>
+                                <td>
+                                    <%= location %>
+                                </td>
+                                <td class="text-center">
+                                    <a href="/hospitals/<%= id %>" class="btn btn-sm btn-success mb-2">View</a>
+                                    <a href="/hospitals/<%= id %>/edit" class="btn btn-sm btn-warning mb-2">Edit</a>
+                                    <form action="/hospitals/<%= id %>" method="post"
+                                        onsubmit="return confirm('Are you sure you want to delete this hospital?')">
+                                        <input type="hidden" name="_method" value="delete">
+                                        <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        <% }) %>
+                        <% } else { %>
+                            <tr>
+                                <td colspan="3" class="text-center">No hospitals found</td>
+                            </tr>
+                    <% } %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <%- include("../shared/_footer") %>

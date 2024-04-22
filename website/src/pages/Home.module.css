@@ -1,0 +1,53 @@
+.doctorsImage {
+  background-image: url("../images/doctors.jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  font-size: 6rem; /* Adjust the font size as needed */
+  font-weight: bold; /* Make the font bold */
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a slight shadow */
+}
+
+.title:hover {
+  font-size: 8rem; /* Adjust the font size as needed */
+}
+
+.title:hover .medi {
+  color: #2c3e50;
+}
+
+.title:hover .connect {
+  color: #f39c12;
+}
+
+.medi {
+  color: #f39c12;
+}
+
+.connect {
+  color: #2c3e50;
+}
+
+.outStructure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.hospitalLink {
+  margin: 2rem;
+}
+.doctorLink {
+  margin: 2rem;
+}

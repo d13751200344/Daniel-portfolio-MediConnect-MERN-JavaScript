@@ -1,0 +1,53 @@
+<%- include("../shared/_header") %>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Doctors List</h1>
+
+        <hr class="my-5">
+
+        <a href="/doctors/new" class="create-link">Create a new doctor</a>
+
+        <div class="table-responsive mt-4">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th class="text-center">Doctor Name</th>
+                        <th class="text-center">Medical Specialty</th>
+                        <th class="text-center">Hospital</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+
+            <tbody>
+                <% if (doctors && doctors.length> 0) { %>
+                    <% doctors.forEach(({ id, doctorName, medicalSpecialty, hospital })=> { %>
+                        <tr>
+                            <td class="text-center">
+                                <%= doctorName %>
+                            </td>
+                            <td class="text-center">
+                                <%= medicalSpecialty %>
+                            </td>
+                            <td class="text-center">
+                                <% const doctorHospital = hospitals.find(h => h._id.toString() === hospital.toString()); %>
+                                <a href="/hospitals/<%= hospital %>">
+                                    <%= doctorHospital.hospitalName %>
+                                </a>
+                            </td>
+                            <td class="text-center">
+                                <a href="/doctors/<%= id %>" class="btn btn-sm btn-success mb-2">View</a>
+                                <a href="/doctors/<%= id %>/edit" class="btn btn-sm btn-warning mb-2">Edit</a>
+                                <form action="/doctors/<%= id %>" method="post"
+                                    onsubmit="return confirm('Are you sure you want to delete this doctor?')">
+                                    <input type="hidden" name="_method" value="delete">
+                                    <button class="btn btn-sm btn-danger" type="submit">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }) %>
+                <% } %>
+            </tbody>
+        </table>
+    </div>
+
+<%- include("../shared/_footer") %>

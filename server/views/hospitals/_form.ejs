@@ -1,0 +1,31 @@
+<%
+    let action = "";
+    let hospitalName = "";
+    let location = "";
+    let method = "post";
+
+    if (typeof hospital !== "undefined") {
+        action = `/${hospital.id}`;
+        hospitalName = hospital.hospitalName;
+        location = hospital.location;
+        method = "put";
+    }
+%>
+
+<form action="/hospitals<%= action %>" method="post" class="mt-3 mb-4">
+    <input type="hidden" name="_method" value="<%= method %>">
+
+    <div class="mb-3">
+        <label for="hospitalName" class="form-label">Hospital Name:</label>
+        <input type="text" class="form-control" id="hospitalName" name="hospitalName" required value="<%= hospitalName %>">
+    </div>
+
+    <div class="mb-3">
+        <label for="location" class="form-label">Hospital Location:</label>
+        <input type="text" class="form-control" id="location" name="location" required value="<%= location %>">
+    </div>
+
+    <!-- Include other fields as necessary -->
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
